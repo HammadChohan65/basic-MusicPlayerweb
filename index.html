@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Music Player</title>
+
+</head>
+<body>
+	
+	<div class="container">
+		<div class="navbar">
+			<img src="images/logo.png">
+			<ul>
+				<li><a href="#">Home </a></li>
+				<li><a href="#">About </a></li>
+				<li><a href="#">Specification</a></li>
+				<li><a href="#">Products </a></li>
+				<li><a href="#">Connect</a></li>
+			</ul>
+		</div>
+
+		<div class="col-left">
+			<h1>The <br>Real  <br>Sound</h1> 
+		</div>
+		<div class="col-right">
+			<div class="audio-container">
+			<p>click here to play music</p>
+			<audio id="audiotag">
+				<source src="images/music.mp3" type="">
+			</audio>
+			<img src="images/play.png" id="img">
+		</div>
+		</div>
+	
+	</div>
+	<script type="text/javascript">
+		let sound = document.getElementById("audiotag");
+		let button = document.getElementById("img");
+
+		button.addEventListener("click", ()=>{
+			if(sound.paused)
+			{
+			sound.play();
+			button.src = "images/pause.png";
+			}
+			else
+			{
+			sound.pause();
+			button.src = "images/play.png";	
+			}
+			
+		}) 
+	</script>
+</body>
+</html>
